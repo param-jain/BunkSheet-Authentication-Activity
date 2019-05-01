@@ -9,14 +9,22 @@ import Reducers from './src/Reducers';
 
 import Login from './src/Screens/Authentication/Login';
 import ForgotPassword from './src/Screens/Authentication/ForgotPassword';
+import Signup_1 from './src/Screens/Authentication/Signup_1';
+import Signup_2 from './src/Screens/Authentication/Signup_2';
 
 
 export default class App extends React.Component {
   render() {
 
+    const SignupNavigator = createBottomTabNavigator ({
+      signup_1: { screen: Signup_1, navigationOptions: {tabBarVisible: false}},
+      signup_2: { screen: Signup_2, navigationOptions: {tabBarVisible: false}}
+    });
+
     const AuthNavigator = createBottomTabNavigator ({
       login: { screen:  Login, navigationOptions: {tabBarVisible: false}},
-      forgotPassword: { screen: ForgotPassword, navigationOptions: {tabBarVisible: false}}
+      forgotPassword: { screen: ForgotPassword, navigationOptions: {tabBarVisible: false}},
+      signup: { screen: SignupNavigator, navigationOptions: {tabBarVisible: false}}
     }, {
       navigationOptions: {
         tabBarVisible: false

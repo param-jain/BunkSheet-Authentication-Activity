@@ -34,3 +34,85 @@ export const loginUser = ({ email, password }) => {
         type: LOGIN_ATTEMPTED,
     }
 };
+
+// Sign Up Screen 
+export const signupEmailChanged = (text) => {
+    return {
+        type: SIGNUP_EMAIL_CHANGED,
+        payload: text
+    };
+};
+export const signupPasswordChanged = (text) => {
+    return {
+        type: SIGNUP_PASSWORD_CHANGED,
+        payload: text
+    };
+};
+export const signupVerifyPasswordChanged = (text) => {
+    return {
+        type: SIGNUP_VERIFY_PASSWORD_CHANGED,
+        payload: text
+    };
+};
+
+// Sign Up Details Screen
+export const signupFNameChanged = (text) => {
+    return {
+        type: SIGNUP_F_NAME_CHANGED,
+        payload: text
+    };
+};
+export const signupLNameChanged = (text) => {
+    return {
+        type: SIGNUP_L_NAME_CHANGED,
+        payload: text
+    };
+};
+export const signupRegIDChanged = (text) => {
+    return {
+        type: SIGNUP_REG_ID_CHANGED,
+        payload: text
+    };
+};
+export const signupCreateAccount = ({ email, password, fName, lName, regID }) => {
+    return {
+        type: SIGNUP_ATTEMPTED,
+    }
+};
+
+// OTP Confirmation Screen
+export const signupOTPChanged = (text) => {
+    return {
+        type: SIGNUP_OTP_CHANGED,
+        payload: text
+    };
+};
+
+// E.A.N Module
+export const eanUserBranchSelect = (text) => {
+    return {
+        type: EAN_USER_BRANCH_SELECT,
+        payload: text
+    };
+};
+
+export const eanUserYearSelect = (text) => {
+    return {
+        type: EAN_USER_YEAR_SELECT,
+        payload: text
+    };
+};
+
+export const eanUserDivisionSelect = (text) => {
+    return {
+        type: EAN_USER_DIVISION_SELECT,
+        payload: text
+    };
+};
+
+export const eanUserBatchSelect = (text) => {
+    return {
+        type: EAN_USER_BATCH_SELECT,
+        payload: text
+    };
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Image, KeyboardAvoidingView, StatusBar, TouchableOpacity } from 'react-native';
+import { Keyboard, Text, View, TextInput, TouchableWithoutFeedback, Image, KeyboardAvoidingView, StatusBar, TouchableOpacity, Dimensions } from 'react-native';
 import { Button } from 'react-native-elements';
 import AnimatedLoader from "react-native-animated-loader";
 
@@ -34,7 +34,7 @@ class Login extends React.Component {
             .then(data => { 
                 console.log("xxx Checking Previously Logged User: "+ data);
                 this.setState({ isAuthenticating: false });
-                //this.props.navigation.navigate('HOME');
+                this.props.navigation.navigate('forgotPassword');
             })
             .catch(error => {
                 this.setState({ isAuthenticating: false });
@@ -75,7 +75,7 @@ class Login extends React.Component {
 
     onSignUpPress() {
         this.setState({ errorMessage: '' });
-        //this.props.navigation.navigate('sign_up_1');
+        this.props.navigation.navigate('signup_1');
     }
 
     onForgotPwdPress() {
@@ -366,9 +366,9 @@ const styles = {
         marginBottom: 30
     },
     lottie: {
-        width: 100,
-        height: 100
-      }
+        width: Dimensions.get('window').width/2,
+        height: Dimensions.get('window').height/2
+    }
 }
 
 const mapStateToProps = (state) => {

@@ -312,8 +312,7 @@ export default class ForgotPassword extends Component {
         if (condition) {
             return (
                 <View>
-                    <Text style={styles.promptMessage}>Reset Code has been sent to your Registered Email ID.</Text>
-                    <Text style={styles.promptMessage}>Kindly check your Inbox ...</Text>
+                    <Text style={styles.promptMessage}>Kindly check your Registered Email ID.</Text>
                 </View>
             );
         }
@@ -458,5 +457,9 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
     },
+    lottie: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height
+    }
 
 }
