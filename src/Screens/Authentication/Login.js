@@ -366,8 +366,8 @@ const styles = {
         marginBottom: 30
     },
     lottie: {
-        width: Dimensions.get('window').width/2,
-        height: Dimensions.get('window').height/2
+        width: 2*Dimensions.get('window').width/3,
+        height: 2*Dimensions.get('window').height/3
     }
 }
 

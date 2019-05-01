@@ -411,8 +411,8 @@ let styles = StyleSheet.create({
         marginTop: 30
     },
     lottie: {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height
+        width: 2*Dimensions.get('window').width/3,
+        height: 2*Dimensions.get('window').height/3
     }
   });
 

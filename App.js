@@ -11,6 +11,7 @@ import Login from './src/Screens/Authentication/Login';
 import ForgotPassword from './src/Screens/Authentication/ForgotPassword';
 import Signup_1 from './src/Screens/Authentication/Signup_1';
 import Signup_2 from './src/Screens/Authentication/Signup_2';
+import ConfirmationScreen from './src/Screens/Authentication/ConfirmationScreen';
 
 
 export default class App extends React.Component {
@@ -18,7 +19,8 @@ export default class App extends React.Component {
 
     const SignupNavigator = createBottomTabNavigator ({
       signup_1: { screen: Signup_1, navigationOptions: {tabBarVisible: false}},
-      signup_2: { screen: Signup_2, navigationOptions: {tabBarVisible: false}}
+      signup_2: { screen: Signup_2, navigationOptions: {tabBarVisible: false}},
+      otp_confirmation: { screen: ConfirmationScreen, navigationOptions: {tabBarVisible: false}}
     });
 
     const AuthNavigator = createBottomTabNavigator ({
