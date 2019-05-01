@@ -14,7 +14,11 @@ export default class App extends React.Component {
   render() {
 
     const AuthNavigator = createBottomTabNavigator ({
-      login: { screen:  Login},
+      login: { screen:  Login, navigationOptions: {tabBarVisible: false}},
+    }, {
+      navigationOptions: {
+        tabBarVisible: false
+      }
     });
     
     const MainNavigator = createBottomTabNavigator ({
