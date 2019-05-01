@@ -8,6 +8,7 @@ import ReduxThunk from 'redux-thunk';
 import Reducers from './src/Reducers';
 
 import Login from './src/Screens/Authentication/Login';
+import ForgotPassword from './src/Screens/Authentication/ForgotPassword';
 
 
 export default class App extends React.Component {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
 
     const AuthNavigator = createBottomTabNavigator ({
       login: { screen:  Login, navigationOptions: {tabBarVisible: false}},
+      forgotPassword: { screen: ForgotPassword, navigationOptions: {tabBarVisible: false}}
     }, {
       navigationOptions: {
         tabBarVisible: false

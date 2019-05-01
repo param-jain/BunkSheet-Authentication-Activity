@@ -9,11 +9,14 @@
   "dependencies": {
     "aws-amplify": "^1.1.26",
     "expo": "^32.0.0",
+    "lottie-react-native": "^2.6.1",
+    "node-pre-gyp": "^0.13.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-animated-loader": "0.0.7",
     "react-native-elements": "^1.1.0",
     "react-navigation": "^3.9.1",
-    "react-redux": "^7.0.3",
+    "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
