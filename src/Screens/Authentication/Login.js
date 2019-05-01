@@ -34,7 +34,7 @@ class Login extends React.Component {
             .then(data => { 
                 console.log("xxx Checking Previously Logged User: "+ data);
                 this.setState({ isAuthenticating: false });
-                this.props.navigation.navigate('forgotPassword');
+                //this.props.navigation.navigate('HOME');
             })
             .catch(error => {
                 this.setState({ isAuthenticating: false });
@@ -65,7 +65,7 @@ class Login extends React.Component {
         Auth.signIn(this.props.email, this.props.password)
             .then(user => {
                     this.setState({ isAuthenticating: false });
-                    this.props.navigation.navigate('ean_home', user); 
+                    //this.props.navigation.navigate('ean_home', user); 
                 })
             .catch(err => { 
                 this.setState({ isAuthenticating: false });
@@ -75,12 +75,12 @@ class Login extends React.Component {
 
     onSignUpPress() {
         this.setState({ errorMessage: '' });
-        this.props.navigation.navigate('sign_up_1');
+        //this.props.navigation.navigate('sign_up_1');
     }
 
     onForgotPwdPress() {
         this.setState({ errorMessage: '' });
-        this.props.navigation.navigate('forgot_password');
+        this.props.navigation.navigate('forgotPassword');
     }
 
     loginButtonDisabled = (email, password) => {
@@ -275,7 +275,7 @@ class Login extends React.Component {
                         />
                         <TouchableOpacity 
                             style={{flexDirection:'row', justifyContent: 'space-around', marginTop: 10 }} 
-                            onPress={() => this.props.navigation.navigate('forgotPassword')}
+                            onPress={() => this.onForgotPwdPress()}
                             >
                             <Text style={{color: '#424242'}} >Forgot Password?</Text>
                         </TouchableOpacity>
